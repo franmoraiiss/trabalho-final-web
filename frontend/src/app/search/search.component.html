@@ -1,0 +1,16 @@
+<div class="container">
+  <form class="example-form">
+    <input
+      type="text"
+      placeholder="Buscar por nome do jogo, desenvolvedor ou gênero"
+      matInput
+      (keyup)="filter($event)"
+    />
+    <select name="" #searchAuto (change)="getAutoComplete(searchAuto.value)">
+      <option value="{{option}}" *ngFor="let option of filteredOptions">
+        {{ option }}
+      </option>
+    </select>
+  </form>
+  <button (click)="autoComplete()">Buscar</button>
+</div>

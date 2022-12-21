@@ -1,0 +1,17 @@
+<nav class="header">
+  <a href="/">
+    <div class="logo">
+      AvaliaGames <img src="../../assets/logo.png" alt="" />
+    </div>
+  </a>
+
+  <a href="/create" class="btn" *ngIf="showButton"> Cadastrar jogo </a>
+  <div class="link" *ngIf="hideButtonLogin" class="login">
+    <a href="/login">Entrar</a>
+  </div>
+  <div class="link" *ngIf="showButton">
+    <button *ngIf="showButton" (click)="exit()">
+      <a class="logout" href="/">Sair</a>
+    </button>
+  </div>
+</nav>
